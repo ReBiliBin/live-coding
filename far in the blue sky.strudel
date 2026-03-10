@@ -1,0 +1,56 @@
+setcpm(148/4)
+
+$bd: s("[bd:1, hh] ~").fast(4)
+    .velocity(.8)
+    ._punchcard()
+
+$sn: s("~ sd").fast(2)
+    .velocity(.4)
+    ._punchcard()
+
+$oh: s("~ oh").fast(4)
+    .velocity(.4)
+    ._punchcard()
+
+$hatbasic: s("hh").fast(8)
+    .velocity(.4)
+    ._punchcard()
+
+$bass: note("[g2, g3] ~ g2 [g2, g3] ~ g2 [g2, g3] ~ g2 [g2, g3] ~ g2 [g2, g3] ~ [g2, g3] [g2, g3]")
+    .s("gm_fretless_bass")
+    .velocity(.4)
+    ._pianoroll()
+
+$fx: note("~ ~ ~ f7 ~ ~ ~ ~")
+    .s("gm_lead_1_square")
+    .velocity(.8)
+    ._pianoroll()
+
+$pluck:
+cat([
+  cat([
+    note("~ ~ [a#5, a#4] ~ ~ [a#5, a#4] ~ ~ [a5, a4] ~ ~ [f5, f4] ~ ~ [f5, f4] ~"),
+    silence,
+    note("~ ~ [f5, f4] ~ ~ [f5, f4] ~ ~ [f5, f4] ~ ~ [f5, f4] ~ ~ [g5, g4] ~"),
+    silence,
+    note("~ ~ [a#5, a#4] ~ ~ [a#5, a#4] ~ ~ [a5, a4] ~ ~ [c6, c5] ~ ~ [g5, g4] ~"),
+    silence,
+    note("~ ~ [c5, c4] ~ ~ [c5, c4] ~ ~ [c5, c4] ~ ~ [c5, c4] ~ ~ [d5, d4] ~"),
+    silence
+  ]),
+  cat([
+    note("~ ~ [a#5, a#4] ~ ~ [a#5, a#4] ~ ~ [a5, a4] ~ ~ [f5, f4] ~ ~ [f5, f4] ~"),
+    silence,
+    note("~ ~ [f5, f4] ~ ~ [f5, f4] ~ ~ [f5, f4] ~ ~ [f5, f4] ~ ~ [g5, g4] ~"),
+    silence,
+    note("~ ~ [a#5, a#4] ~ ~ [a#5, a#4] ~ ~ [a5, a4] ~ ~ [c6, c5] ~ ~ [g5, g4] ~"),
+    silence,
+    note("~ ~ [c5, c4] ~ ~ [c5, c4] ~ ~ [c5, c4] ~ ~ [c5, c4] ~ ~ [d5, d4] ~"),
+    note("~ ~ [a5, a4] ~ ~ [a#5, a#4] ~ ~ [c6, c5] ~ [a5, a4] ~ [f5, f4] [d5, d4] ~ [g5, g4]")
+  ]),
+  silence
+])
+
+.slow(24)
+.s("gm_electric_bass_pick")
+._pianoroll()
